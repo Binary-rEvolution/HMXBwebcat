@@ -12,12 +12,9 @@
     <link rel="stylesheet" href="https://cdn.korzh.com/metroui/v4/css/metro-all.min.css">
     <link rel="stylesheet" href="style.css">
 
-    <script>
-      window.on_page_functions = [];
-    </script>
-
-    <!-- Metro UI JS-->
-    <script src="https://cdn.korzh.com/metroui/v4/js/metro.min.js"></script>
+    <!-- <script> -->
+    <!--   window.on_page_functions = []; -->
+    <!-- </script> -->
 
     <!-- Latex imports -->
     <script>
@@ -31,8 +28,6 @@
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
     </script>
 
-    <!-- JQuery JS to load JSON file from URL -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   </head>
 
   <body class="m4-cloak">
@@ -91,11 +86,53 @@
       <div class="container"></div>
     </div>
 
+
     <div class="container">
-      <table class="styled-table" data-role="table" data-rows="10" data-horizontal-scroll="true" data-source="https://raw.githubusercontent.com/Binary-rEvolution/HMXBwebcat5/main/test.json">
-      </table>
+      <div class="row flex-justify-between" style="min-width: 200px!important;">
+        <div class="cell-md-8">
+          <div id="table-search"></div>
+        </div>
+        <div class="cell-md-3">
+          <div class="row">
+            <div id="rows-count"></div>
+            <div id="table-actions" class="cell-md-2">
+              <a onclick="$('#demo-table').data('table').toggleInspector()" class="button ml-1"><span class="mif-cog"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- data-source="./table-insp.json" -->
+    <table id="demo-table"
+           class="table styled-table table-border striped row-hover mt-4 entities-table"
+           data-role="table"
+           data-source="https://raw.githubusercontent.com/Binary-rEvolution/HMXBwebcat5/main/test.json"
+           data-cls-table-top="row"
+           data-table-search-title="Search HMXB:"
+           data-table-rows-count-title="Show:"
+           data-all-records-title="All HMXBs"
+           data-rows="10"
+           data-rows-steps="-1, 10, 20, 50, 100"
+           data-info-wrapper="#table-info"
+           data-pagination-wrapper="#pagination"
+           data-rows-wrapper="#rows-count"
+           data-search-wrapper="#table-search"
+           data-inspector-title="Setup view"
+           data-view-save-mode="client"
+
+    ></table>
+
+    <div class="row">
+        <div class="cell-md-8">
+            <div id="pagination"></div>
+            <div id="table-info"></div>
+        </div>
     </div>
 
+</div>
+
+<!-- <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script> -->
+<script src="https://cdn.korzh.com/metroui/v4/js/metro.min.js"></script>
   </body>
 
 </html>
