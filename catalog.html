@@ -28,9 +28,10 @@
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
     </script>
 
+
   </head>
 
-  <body class="m4-cloak">
+  <body class="m4-cloak" onload="Javascript:getHeader()">
     <header class="fg-dark">
       <div class="container pt-4 pb-2 pl-8 pr-8">
         <div class="row">
@@ -121,6 +122,17 @@
            data-view-save-mode="client"
 
     ></table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      function getHeader () {
+        var table = document.getElementById("demo-table");
+        headers = table.rows.item(0).cells
+        for (var index = 0; index < headers.length; index++) {
+          console.log(headers[index].innerHTML)
+        }
+      }
+    </script>
 
     <div class="row">
         <div class="cell-md-8">
