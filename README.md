@@ -61,7 +61,7 @@ Systemic radial velocity of the binary (unaffected by orbital motion), given in 
 Flag for variability taking into account results from the INTEGRAL, 4XMM DR11, Chandra and Swift 2SXPS catalogues.
 
 
-
+# License
 Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
 This work is licensed under a
