@@ -92,67 +92,86 @@
       <div class="container"></div>
     </div>
 
+    <div class="container">
+      <input type="checkbox" data-role="checkbox" data-caption="Checks" checked onclick="$('#demo-table').attr('data-check', $(this).is(':checked'))">
+      <input type="checkbox" data-role="checkbox" data-caption="Row number" onclick="$('#demo-table').attr('data-rownum', $(this).is(':checked'))">
+    </div>
 
     <div class="container">
-      <div class="row flex-justify-between" style="min-width: 200px!important;">
-        <div class="cell-md-8">
-          <div id="table-search"></div>
-        </div>
-        <div class="cell-md-3">
-          <div class="row">
-            <div id="rows-count"></div>
-            <div id="table-actions" class="cell-md-2">
-              <a onclick="$('#demo-table').data('table').toggleInspector()" class="button ml-1"><span class="mif-cog"></span></a>
-            </div>
+      <div class="row flex-justify-between flex-nowrap ml-0 mr-0 mt-2">
+          <div class="cell-md-8">
+              <div id="table-search"></div>
           </div>
-        </div>
-      </div>
+          <div class="no-wrap ml-1 row">
+              <div id="rows-count"></div>
+              <div id="table-actions" class="d-flex flex-align-center">
+                  <div class="dropdown-button">
+                      <button class="button"><span class="mif-more-horiz"></span></button>
+                      <ul class="d-menu context shadow-3" data-role="dropdown">
+                          <li><a href="#" onclick="$('#demo-table').data('table').export('CSV', 'all', 'export-all.csv')"><span class="mif-upload2 fg-cyan icon"></span> Export all</a></li>
+                          <li><a href="#" onclick="$('#demo-table').data('table').export('CSV', 'checked', 'export-checked.csv')"><span class="mif-upload2 fg-steel icon"></span> Export selected</a></li>
+                          <li><a href="#" onclick="$('#demo-table').data('table').export('CSV', 'view', 'export-view.csv')"><span class="mif-upload2 fg-brown icon"></span> Export current view</a></li>
+                      </ul>
+                  </div>
 
-    <table id="demo-table"
-           class="table styled-table table-border striped row-hover mt-4 entities-table"
-           data-role="table"
-           data-source="./MAIN_HMXB_CATALOGUE_urls.json"
-           data-cls-table-top="row"
-           data-table-search-title="Search HMXB:"
-           data-table-rows-count-title="Show:"
-           data-all-records-title="All HMXBs"
-           data-rows="10"
-           data-rows-steps="-1, 10, 20, 50, 100"
-           data-info-wrapper="#table-info"
-           data-pagination-wrapper="#pagination"
-           data-rows-wrapper="#rows-count"
-           data-search-wrapper="#table-search"
-           data-inspector-title="Setup view"
-           data-view-save-mode="client"
-           data-horizontal-scroll="true"
-    ></table>
+                  <a onclick="$('#demo-table').data('table').toggleInspector()" class="button ml-1"><span class="mif-cog"></span></a>
+
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <table id="demo-table"
+             class="table styled-table table-border striped row-hover mt-4 entities-table"
+             data-role="table"
+             data-source="./MAIN_HMXB_CATALOGUE_urls.json"
+             data-cls-table-top="row"
+             data-cls-search="cell-md-8"
+             data-table-search-title="Search HMXB:"
+             data-table-rows-count-title="Show:"
+             data-all-records-title="All HMXBs"
+             data-rows="10"
+             data-rows-steps="-1, 5, 10, 20, 50, 100"
+             data-info-wrapper="#table-info"
+             data-pagination-wrapper="#pagination"
+             data-rows-wrapper="#rows-count"
+             data-search-wrapper="#table-search"
+             data-inspector-title="Setup view"
+             data-view-save-mode="client"
+             data-horizontal-scroll="true"
+             data-check="true"
+             data-check-col-index="0"
+             data-check-store-key="MY_STORE_FOR_TABLE:$1"
+      ></table>
+    </div>
 
     <!-- Import jquery to load json file that handles the keymapping of table headers -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
     <!-- this function takes care of the modifications to the table. it is called onload (see <body> tag) -->
-    <script type="text/javascript">
-      function getHeader () {
-        let fetchRes = fetch("./keymaps.json");
-          fetchRes.then(res =>
-            res.json()
-          ).then(keymaps => {
-            var table = document.getElementById("demo-table");
-            console.log(table)
-            headers = table.rows.item(0).cells;
-            for (var index = 2; index < headers.length; index++) {
-              var headerName = headers[index].innerHTML
-              if (headerName in keymaps) {
-                var headerValue = keymaps[headerName]
-                console.log(headerName, headerValue)
-                headers[index].innerHTML = headerValue
-              }
-            }
+    <!-- <script type="text/javascript"> -->
+    <!--   function getHeader () { -->
+    <!--     let fetchRes = fetch("./keymaps.json"); -->
+    <!--       fetchRes.then(res => -->
+    <!--         res.json() -->
+    <!--       ).then(keymaps => { -->
+    <!--         var table = document.getElementById("demo-table"); -->
+    <!--         console.log(table) -->
+    <!--         headers = table.rows.item(0).cells; -->
+    <!--         for (var index = 2; index < headers.length; index++) { -->
+    <!--           var headerName = headers[index].innerHTML -->
+    <!--           if (headerName in keymaps) { -->
+    <!--             var headerValue = keymaps[headerName] -->
+    <!--             console.log(headerName, headerValue) -->
+    <!--             headers[index].innerHTML = headerValue -->
+    <!--           } -->
+    <!--         } -->
+    <!---->
+    <!--       }) -->
+    <!--   }; -->
+    <!-- </script> -->
 
-          })
-      };
-    </script>
-
-    <div class="row">
+    <div class="container row">
         <div class="cell-md-8">
             <div id="pagination"></div>
             <div id="table-info"></div>
