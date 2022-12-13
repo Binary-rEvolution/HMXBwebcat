@@ -2,11 +2,19 @@
 <html lang="en" class=" scrollbar-type-1 sb-cyan">
 
   <head>
-    <title>Catalog of High-mass X-ray Binaries</title>
+
+    <title>Catalogue of High-mass X-ray Binaries</title>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./pictures/favicon.ico">
+
+    <!-- CSS stylesheets -->
     <link rel="stylesheet" href="https://cdn.korzh.com/metroui/v4/css/metro-all.min.css">
     <link rel="stylesheet" href="style.css">
+
     <script>
       window.on_page_functions = [];
     </script>
@@ -18,78 +26,104 @@
       MathJax = {
         tex: {
           inlineMath: [['$', '$'], ['\\(', '\\)']]
-        },
+        }
       };
     </script>
     <script type="text/javascript" id="MathJax-script" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   </head>
 
-  <body class="m4-cloak">
-    <header class="fg-dark">
-      <div class="container pt-4 pb-2 pl-8 pr-8">
-        <div class="row">
-          <div class="cell-sm-6">
-            <a class="logo no-decor" href="index.html">
-              <h4 class="logo">Binary rEvolution</h4>
-              <span class="logo-sub">From evolving binaries to the merging of compact objects</span>
-            </a>
-          </div>
-          <div class="cell-sm-6 text-right  d-none d-block-sm">
-            <a href="#" class="no-decor">
-              Maintained by <br>
-              <span class="fg-dark">
-                <a href="https://github.com/Binary-rEvolution">@Binary-rEvolution</a>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
 
-    <nav class="main-menu bg-control text-upper">
-      <div class="container">
-        <div data-role="appbar" class="pos-relative" data-expand-point="lg">
-          <button type="button" class="hamburger menu-down"><span class="line"></span><span class="line"></span><span class="line"></span></button>
-          <ul class="app-bar-menu order-2 order-lg-1">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="catalog.html">Catalog</a></li>
-            <li><a href="#">Notes</a></li>
-            <li><a href="#">Downloads</a></li>
-            <li><a href="#">Contributing</a></li>
-          </ul>
 
-          <div class="app-bar-container ml-auto order-1 order-lg-2">
-            <a href="#" class="app-bar-item">About<span class="va-middle ml-2"></span></a>
-          </div>
-        </div>
-      </div>
-    </nav>
+  <script src="banner_menu.js"></script>
 
-    <div class="p-4 bg-scheme-secondary">
-      <div class="container">
-        <div class="row">
-          <div class="cell-md-8">
-            <h2 class="text-white">5th catalog of High-Mass X-ray Binaries</h2>
-            <p class="text-white">Multi-wavelength information from INTEGRAL to Gaia</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="p-4">
-      <div class="container"></div>
-    </div>
 
     <div class="container">
-      <table class="styled-table" data-role="table" data-rows="10" data-horizontal-scroll="true" data-source="./test.json">
-      </table>
+      <div class="row flex-justify-between flex-nowrap ml-0 mr-0 mt-2">
+          <div class="cell-md-8">
+              <div id="table-search"></div>
+          </div>
+          <div class="no-wrap ml-1 row">
+              <div id="rows-count"></div>
+              <div id="table-actions" class="d-flex flex-align-center">
+                  <div class="dropdown-button">
+                      <button class="button"><span class="mif-more-horiz"></span></button>
+                      <ul class="d-menu context shadow-3" data-role="dropdown">
+                          <li><a href="#" onclick="$('#demo-table').data('table').export('CSV', 'all', 'export-all.csv')"><span class="mif-upload2 fg-cyan icon"></span> Export all</a></li>
+                          <li><a href="#" onclick="$('#demo-table').data('table').export('CSV', 'checked', 'export-checked.csv')"><span class="mif-upload2 fg-steel icon"></span> Export selected</a></li>
+                          <li><a href="#" onclick="$('#demo-table').data('table').export('CSV', 'view', 'export-view.csv')"><span class="mif-upload2 fg-brown icon"></span> Export current view</a></li>
+                      </ul>
+                  </div>
+
+                  <a onclick="$('#demo-table').data('table').toggleInspector()" class="button ml-1"><span class="mif-cog"></span></a>
+
+              </div>
+          </div>
+      </div>
     </div>
-  
+    <div class="container" style="opacity:0.6">
+      &nbsp;&nbsp; Query tip: any identifier known by Simbad will work !
+    </div>
+    <div class="container">
+      <table id="demo-table"
+             class="table styled-table table-border striped row-hover mt-4 entities-table"
+             data-role="table"
+             data-source="./MAIN_HMXB_CATALOGUE_urls.json"
+             data-cls-table-top="row"
+             data-cls-search="cell-md-8"
+             data-table-search-title="Search HMXB:"
+             data-table-rows-count-title="Show:"
+             data-all-records-title="All HMXBs"
+             data-rows="10"
+             data-rows-steps="-1, 5, 10, 20, 50, 100"
+             data-info-wrapper="#table-info"
+             data-pagination-wrapper="#pagination"
+             data-rows-wrapper="#rows-count"
+             data-search-wrapper="#table-search"
+             data-inspector-title="Setup view"
+             data-view-save-mode="client"
+             data-horizontal-scroll="true"
+             data-check="true"
+             data-check-col-index="0"
+             data-check-store-key="MY_STORE_FOR_TABLE:$1"
+      ></table>
+    </div>
+
+    <!-- Import jquery to load json file that handles the keymapping of table headers -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+    <!-- this function takes care of the modifications to the table. it is called onload (see <body> tag) -->
+    <!-- <script type="text/javascript"> -->
+    <!--   function getHeader () { -->
+    <!--     let fetchRes = fetch("./keymaps.json"); -->
+    <!--       fetchRes.then(res => -->
+    <!--         res.json() -->
+    <!--       ).then(keymaps => { -->
+    <!--         var table = document.getElementById("demo-table"); -->
+    <!--         console.log(table) -->
+    <!--         headers = table.rows.item(0).cells; -->
+    <!--         for (var index = 2; index < headers.length; index++) { -->
+    <!--           var headerName = headers[index].innerHTML -->
+    <!--           if (headerName in keymaps) { -->
+    <!--             var headerValue = keymaps[headerName] -->
+    <!--             console.log(headerName, headerValue) -->
+    <!--             headers[index].innerHTML = headerValue -->
+    <!--           } -->
+    <!--         } -->
+    <!---->
+    <!--       }) -->
+    <!--   }; -->
+    <!-- </script> -->
+
+    <div class="container row">
+        <div class="cell-md-8">
+            <div id="pagination"></div>
+            <div id="table-info"></div>
+        </div>
+
+    </div>
+
   </body>
 
 </html>
