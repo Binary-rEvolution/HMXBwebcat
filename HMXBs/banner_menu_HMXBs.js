@@ -10,7 +10,7 @@ document.write(`
             </a>
           </div>
           <div class="" align="left" width="20vw">
-            <img src="/pictures/logos.png" alt="logos" style="position:relative; color:black; right:100px; top:0px;" align="left" width="500vw">
+            <img src="../pictures/logos.png" alt="logos" style="position:relative; color:black; right:100px; top:0px;" align="left" width="500vw">
           </div>
           <div class="" align="right"><br>
             Maintained by <br>
