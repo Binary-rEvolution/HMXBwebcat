@@ -2,7 +2,7 @@
 <html lang="en" class=" scrollbar-type-1 sb-cyan">
 
   <head>
-    <title>Catalog of High-mass X-ray Binaries</title>
+    <title>Catalogue of High-Mass X-ray Binaries</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdn.korzh.com/metroui/v4/css/metro-all.min.css">
@@ -10,6 +10,9 @@
     <script>
       window.on_page_functions = [];
     </script>
+    
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./pictures/favicon.ico">
 
     <!-- Metro UI JS-->
     <script src="https://cdn.korzh.com/metroui/v4/js/metro.min.js"></script>
@@ -26,59 +29,77 @@
     </script>
   </head>
 
-  <body class="m4-cloak">
-    <header class="fg-dark">
-      <div class="container pt-4 pb-2 pl-8 pr-8">
-        <div class="row">
-          <div class="cell-sm-6">
-            <a class="logo no-decor" href="#">
-              <h4 class="logo">Binary rEvolution</h4>
-              <span class="logo-sub">From evolving binaries to the merging of compact objects</span>
-            </a>
-          </div>
-          <div class="cell-sm-6 text-right  d-none d-block-sm">
-            <a href="#" class="no-decor">
-              Maintained by <br>
-              <span class="fg-dark">
-                <a href="https://github.com/Binary-rEvolution">@Binary-rEvolution</a>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
+  <script src="banner_menu.js"></script>
+  
+  <style>
+    div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      padding: 5px;
+      float: left;
+      width: 300px;
+    }
 
-    <div class="p-4 bg-scheme-secondary">
-      <div class="container">
-        <div class="row">
-          <div class="cell-md-8">
-            <h2 class="text-white">5th catalog of High-Mass X-ray Binaries</h2>
-            <p class="text-white">Multi-wavelength information from INTEGRAL to Gaia</p>
-          </div>
-        </div>
-      </div>
+    div.gallery:hover {
+      border: 2px solid #777;
+    }
+
+    
+
+    div.desc {
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+  
+  
+  <div class="container">
+    <br><br>
+    <b>
+    We are the Binary rEvolution team, funded by the LabEx UnivEarthS interface project I10: <i>"Binary rEvolution: from binary evolution towards merging of compact objects"</i>.
+    </b>
+    <br><br>
+
+    <div class="gallery">
+    <a href="https://ffortin-sci-edu.github.io/index.html" target="_blank" rel="noreferrer noopener"><img src="./pictures/FFORTIN.png" alt="ffortin"></a>
+    <div class="desc"><h4><b>Francis Fortin</b></h4>
+    Postdoctoral researcher<br>Astroparticle and Cosmology<br>(APC, Paris, France).<br><br>
+    <a href="mailto:ffortin@apc.in2p3.fr"><img src="./pictures/email.png" alt="email">&nbsp;ffortin@apc.in2p3.fr</a>
+    </div>
     </div>
 
-    <nav class="main-menu bg-control text-upper">
-      <div class="container">
-        <div data-role="appbar" class="pos-relative" data-expand-point="lg">
-          <button type="button" class="hamburger menu-down"><span class="line"></span><span class="line"></span><span class="line"></span></button>
-          <ul class="app-bar-menu order-2 order-lg-1">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="catalog.html">Catalog</a></li>
-            <li><a href="notes.html">Notes</a></li>
-            <li><a href="downloads.html">Downloads</a></li>
-            <li><a href="contributing.html">Contributing</a></li>
-          </ul>
-
-          <div class="app-bar-container ml-auto order-1 order-lg-2">
-            <a href="#" class="app-bar-item">About<span class="va-middle ml-2"></span></a>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <div class="gallery">
+    <a href="http://tux.iar.unlp.edu.ar/~fgarcia/index.en.html" target="_blank" rel="noreferrer noopener"><img src="./pictures/FGARCIA.png" alt="fgarcia"></a>
+    <div class="desc"><h4><b>Federico Garcia</b></h4>
+    Assistant researcher<br>Instituto Argentino de Radioastronomia<br>(IAR-CONICET, Pereyra, Argentina).<br>
+    <a href="mailto:fgarcia@iar.unlp.edu.ar"><img src="./pictures/email.png" alt="email">&nbsp;fgarcia@iar.unlp.edu.ar</a>
+    </div>
+    </div>
     
-      
+    <div class="gallery">
+    <a href="https://asimazbunzel.github.io/" target="_blank" rel="noreferrer noopener"><img src="./pictures/ASIMAZ.png" alt="asimaz"></a>
+    <div class="desc"><h4><b>Adolfo Simaz Bunzel</b></h4>
+    PhD student<br>Instituto Argentino de Radioastronomia<br>(IAR-CONICET, Pereyra, Argentina).<br>
+    <a href="mailto:asimazbunzel@iar.unlp.edu.ar"> <img src="./pictures/email.png" alt="email">&nbsp;asimazbunzel@iar.unlp.edu.ar</a>
+    </div>
+    </div>
+    
+    <div class="gallery">
+    <img src="./pictures/SCHATY.png" alt="schaty">
+    <div class="desc"><h4><b>Sylvain Chaty</b></h4>
+    Professor<br>Université Paris Cité<br>(APC, Paris, France).<br><br>
+    <a href="mailto:chaty@apc.in2p3.fr"><img src="./pictures/email.png" alt="email">&nbsp;chaty@apc.in2p3.fr</a>
+    </div>
+    </div>
+  </div>
+    <div class="container">
+ 
+    We are grateful:<br>
+    - to the CNES (Centre National d'Études Spatiales) for the funding of MINE (Multi-wavelength INTEGRAL Network);<br>
+    - for the support by PIP 0113 (CONICET), PICT-2017-2865 (ANPCyT) and PIBAA 1275 (CONICET).<br>
+
+    This work made extensive use of NASA's Astrophysics Data System (ADS), and of the services of the Centre de Données Astronomiques de Strasbourg (CDS) Simbad and Vizier.<br><br>
+    </div>
 
   </body>
 

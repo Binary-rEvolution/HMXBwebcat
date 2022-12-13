@@ -3,13 +3,13 @@
 
   <head>
 
-    <title>Catalog of High-mass X-ray Binaries</title>
+    <title>Catalogue of High-mass X-ray Binaries</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 
     <!-- favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./pictures/favicon.ico">
 
     <!-- CSS stylesheets -->
     <link rel="stylesheet" href="https://cdn.korzh.com/metroui/v4/css/metro-all.min.css">
@@ -35,69 +35,10 @@
 
   </head>
 
-  <body class="m4-cloak"> <!-- onload="Javascript:getHeader()"> -->
-
-    <header class="fg-dark">
-      <div class="container pt-4 pb-2 pl-8 pr-8">
-        <div class="row">
-          <div class="cell-sm-6">
-            <a class="logo no-decor" href="index.html">
-              <h4 class="logo">Binary rEvolution</h4>
-              <span class="logo-sub">From evolving binaries to the merging of compact objects</span>
-            </a>
-          </div>
-          <div class="cell-sm-6 text-right  d-none d-block-sm">
-            <a href="#" class="no-decor">
-              Maintained by <br>
-              <span class="fg-dark">
-                <a href="https://github.com/Binary-rEvolution">@Binary-rEvolution</a>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
 
 
-    <div class="p-4 bg-scheme-secondary">
-      <div class="container">
-        <div class="row">
-          <div class="cell-md-8">
-            <h2 class="text-white">5th catalog of High-Mass X-ray Binaries</h2>
-            <p class="text-white">Multi-wavelength information from INTEGRAL to Gaia</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <script src="banner_menu.js"></script>
 
-    <nav class="main-menu bg-control text-upper">
-      <div class="container">
-        <div data-role="appbar" class="pos-relative" data-expand-point="lg">
-          <button type="button" class="hamburger menu-down"><span class="line"></span><span class="line"></span><span class="line"></span></button>
-          <ul class="app-bar-menu order-2 order-lg-1">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="catalog.html">Catalog</a></li>
-            <li><a href="notes.html">Notes</a></li>
-            <li><a href="downloads.html">Downloads</a></li>
-            <li><a href="contributing.html">Contributing</a></li>
-          </ul>
-
-          <div class="app-bar-container ml-auto order-1 order-lg-2">
-            <a href="about.html" class="app-bar-item">About<span class="va-middle ml-2"></span></a>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-
-    <div class="container">
-
-      <table class="styled-table" data-role="table" data-rows="10" data-horizontal-scroll="true" data-source="./MAIN_HMXB_CATALOGUE.json">
-      </table>
-
-      <input type="checkbox" data-role="checkbox" data-caption="Checks" checked onclick="$('#demo-table').attr('data-check', $(this).is(':checked'))">
-      <input type="checkbox" data-role="checkbox" data-caption="Row number" onclick="$('#demo-table').attr('data-rownum', $(this).is(':checked'))">
-    </div>
 
     <div class="container">
       <div class="row flex-justify-between flex-nowrap ml-0 mr-0 mt-2">
@@ -122,7 +63,9 @@
           </div>
       </div>
     </div>
-
+    <div class="container" style="opacity:0.6">
+      &nbsp;&nbsp; Query tip: any identifier known by Simbad will work !
+    </div>
     <div class="container">
       <table id="demo-table"
              class="table styled-table table-border striped row-hover mt-4 entities-table"
