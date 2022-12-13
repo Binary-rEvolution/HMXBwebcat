@@ -33,7 +33,7 @@ document.write(`
       </div>
     </div>
 
-    <nav class="main-menu bg-control text-upper">
+    <nav class="main-menu bg-control text-upper" style="position:relative; z-index: 1">
       <div class="container">
         <div data-role="appbar" class="pos-relative" data-expand-point="lg">
           <button type="button" class="hamburger menu-down"><span class="line"></span><span class="line"></span><span class="line"></span></button>
