@@ -26,8 +26,8 @@ document.write(`
       <div class="container">
         <div class="row">
           <div class="cell-md-8">
-            <h2 class="text-white">A Catalogue of High-Mass X-ray Binaries</h2>
-            <p class="text-white">From <i>INTEGRAL</i> to <i>Gaia</i> era</p>
+            <h2 class="text-white">A Catalogue of High-Mass X-ray Binaries in the Galaxy</h2>
+            <p class="text-white">From the <i>INTEGRAL</i> to the <i>Gaia</i> era</p>
           </div>
         </div>
       </div>

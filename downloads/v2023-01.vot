@@ -3,7 +3,7 @@
  xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
 <!--
  !  VOTable written by STIL version 3.4-debian (uk.ac.starlink.votable.VOTableWriter)
- !  at 2022-12-09T10:04:37
+ !  at 2023-01-30T09:14:42
  !-->
 <RESOURCE>
 <TABLE name="/home/ffortin/Documents/projets_science/binaries_catalogue/ffortin_binaries/MAIN_HMXB_CATALOGUE.fits#1" nrows="152">
@@ -4069,9 +4069,9 @@
   </TR>
   <TR>
     <TD>Cen X-3</TD>
-    <TD>O9III-V</TD>
-    <TD>1974ApJ...191L..23V</TD>
-    <TD>Be</TD>
+    <TD>O6-7 II-III</TD>
+    <TD>1999MNRAS.307..357A</TD>
+    <TD>sg</TD>
     <TD>NS</TD>
     <TD>32.0</TD>
     <TD>13.0</TD>
