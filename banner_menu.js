@@ -4,7 +4,7 @@ document.write(`
       <div class="container pt-4 pb-2 pl-8 pr-8">
         <div class="row">
           <div class="cell-sm-6">
-            <a class="logo no-decor" href="#">
+            <a class="logo no-decor" href="https://binary-revolution.github.io/">
               <h4 class="logo">Binary rEvolution</h4>
               <span class="logo-sub">From evolving binaries to the merging of compact objects</span>
             </a>
