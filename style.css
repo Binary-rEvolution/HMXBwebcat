@@ -125,3 +125,24 @@ hr {
     font-weight: bold;
     color: #009879;
 }
+
+
+    div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      padding: 5px;
+      float: left;
+      width: 300px;
+    }
+
+    div.gallery:hover {
+      border: 2px solid #777;
+    }
+
+    
+
+    div.desc {
+      padding: 10px;
+      text-align: center;
+    }
+
