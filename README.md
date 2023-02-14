@@ -29,7 +29,7 @@ WR: Wolf-Rayet
 Sky coordinates from the most accurate counterpart we found. Right ascension and Declination are given in degrees. The 90\% positional error radius is given in milli-arcsecond (mas).
 
 ### Distance
-Distance to the source as published in Bailer-Jones (2021).
+Geometric distance to the source as published in Bailer-Jones (2021).
 Note: this is only available to HMXBs with a Gaia counterpart.
 
 
