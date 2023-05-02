@@ -1,0 +1,166 @@
+
+name: Contribute
+description: Add X-ray binary parameters to HMXB catalog
+
+title: "Contribution: "
+labels: ["contribution", "enhancement"]
+
+assignees:
+  - asimazbunzel
+  - ffortin-sci-edu
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this contribution report!
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: e.g. email@server.com
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        <br>
+
+        Please, complete the following form to update the stellar parameters in the catalog.
+
+        Note that there is no need to fill them all
+
+  - type: textarea
+    id: stellar-id
+    attributes:
+      label: Main ID
+      placeholder: e.g., IGR J00370+6122
+    validations:
+      required: false
+
+  - type: textarea
+    id: spectral-type
+    attributes:
+      label: Spectral type (with reference)
+      placeholder: e.g., BN0.7 Ib 2014A&A...566A.131G
+    validations:
+      required: false
+
+  - type: textarea
+    id: class
+    attributes:
+      label: Class
+      placeholder: e.g., sg
+    validations:
+      required: false
+
+  - type: textarea
+    id: ra
+    attributes:
+      label: Right Ascension [J2000]
+      placeholder: e.g., 9.29013
+    validations:
+      required: false
+
+  - type: textarea
+    id: dec
+    attributes:
+      label: Declination [J2000]
+      placeholder: e.g., 61.3601
+    validations:
+      required: false
+
+  - type: textarea
+    id: err-radius
+    attributes:
+      label: Error radius [mass]
+      placeholder: e.g., 0.008
+    validations:
+      required: false
+
+  - type: textarea
+    id: distance
+    attributes:
+      label: Distance [pc]
+      placeholder: e.g., 3401 (-171, +186)
+    validations:
+      required: false
+
+  - type: textarea
+    id: mx
+    attributes:
+      label: Mx [Msun] (mass of compact object) with reference
+      placeholder: e.g.,
+    validations:
+      required: false
+
+  - type: textarea
+    id: mo
+    attributes:
+      label: Mo [Msun] (mass of optical companion) with reference
+      placeholder: e.g., 22.0 2014A&A...563A...1G
+    validations:
+      required: false
+
+  - type: textarea
+    id: porb
+    attributes:
+      label: Period [days] (orbital period) with reference
+      placeholder: e.g., 15.6649 +/- 0.0014 2021PASJ...73.1389U
+    validations:
+      required: false
+
+  - type: textarea
+    id: super-porb
+    attributes:
+      label: Super orbital period [days] (super orbital period) with reference
+      placeholder: e.g.,
+    validations:
+      required: false
+
+  - type: textarea
+    id: ecc
+    attributes:
+      label: Eccentricity with reference
+      placeholder: e.g., 0.48 +/- 0.03 2014A&A...563A...1G
+    validations:
+      required: false
+
+  - type: textarea
+    id: spin-period
+    attributes:
+      label: Spin period [s] with reference
+      placeholder: e.g., 674.0 2021PASJ...73.1389U
+    validations:
+      required: false
+
+  - type: textarea
+    id: radial-velocity
+    attributes:
+      label: Radial velocity [km s-1] with reference
+      placeholder: e.g., -80.0 +/- 3.0 2014A&A...563A...1G
+    validations:
+      required: false
+
+  - type: dropdown
+    id: variable-system
+    attributes:
+      label: Variability
+      description: Is binary system variable?
+      options:
+        - Yes (Default)
+        - No
+    validations:
+      required: false
+
+  # - type: dropdown
+  #   id: variable-system
+  #   attributes:
+  #     label: Variability
+  #     description: Is system variable?
+  #     options:
+  #       - Yes
+  #       - No
