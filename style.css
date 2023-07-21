@@ -68,6 +68,11 @@ hr {
   background-color: #b00015;
 }
 
+
+.container{
+   max-width: 1700px;
+}
+
 .main-menu .hamburger {
   left: 0;
   right: auto;
