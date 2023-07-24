@@ -46,7 +46,7 @@ document.write(`
           </ul>
 
           <div class="app-bar-container ml-auto order-1 order-lg-2">
-            <a href="https://binary-revolution.github.io/LMXBwebcat/index.html" class="app-bar-item">Switch to LMXB Catalogue &nbsp;&nbsp;<img src="./pictures/LMXBfavicon.ico"></a>
+            <a href="https://binary-revolution.github.io/LMXBwebcat/index.html" class="app-bar-item">Switch to LMXB Catalogue &nbsp;&nbsp;<img src="../pictures/LMXBfavicon.ico"></a>
             <a href="../about.html" class="app-bar-item">About<span class="va-middle ml-2"></span></a>
           </div>
         </div>
