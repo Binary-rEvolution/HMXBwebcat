@@ -39,7 +39,7 @@ document.write(`
           <button type="button" class="hamburger menu-down"><span class="line"></span><span class="line"></span><span class="line"></span></button>
           <ul class="app-bar-menu order-2 order-lg-1">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="catalog.html">HMXB Catalogue</a></li>
+            <li><a href="../catalog.html">HMXB Catalogue</a></li>
             <li><a href="../notes.html">Notes</a></li>
             <li><a href="../downloads.html">Downloads</a></li>
             <li><a href="../contributing.html">Contributing</a></li>
