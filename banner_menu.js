@@ -40,13 +40,13 @@ document.write(`
           <ul class="app-bar-menu order-2 order-lg-1">
             <li><a href="index.html">Home</a></li>
             <li><a href="catalog.html">HMXB Catalogue</a></li>
-            <li><a href="https://binary-revolution.github.io/LMXBwebcat/catalog.html">LMXB Catalogue</a></li>
             <li><a href="notes.html">Notes</a></li>
             <li><a href="downloads.html">Downloads</a></li>
             <li><a href="contributing.html">Contributing</a></li>
           </ul>
 
           <div class="app-bar-container ml-auto order-1 order-lg-2">
+            <a href="https://binary-revolution.github.io/LMXBwebcat/index.html" class="app-bar-item">Switch to LMXB Catalogue &nbsp;&nbsp;<img src="../pictures/LMXBfavicon.ico"></a>
             <a href="about.html" class="app-bar-item">About<span class="va-middle ml-2"></span></a>
           </div>
         </div>
