@@ -63,13 +63,13 @@
     <script type="text/javascript">
         let aladin;
         A.init.then(() => {
-aladin = A.aladin('#aladin-lite-div', {survey: "P/2MASS/color", fov:0.01, target: "176.86894042633617 -61.953719225831875"});
+aladin = A.aladin('#aladin-lite-div', {survey: "P/2MASS/color", fov:0.01, target: "235.59729827776863 -52.38601199162066"});
 
         $('input[name=survey]').change(function() {
             aladin.setImageSurvey($(this).val());
         });
         
-        var marker1 = A.marker(176.86894042633617,-61.953719225831875, {popupTitle: 'Gaia', popupDesc: ''});
+        var marker1 = A.marker(235.59729827776863,-52.38601199162066, {popupTitle: 'Gaia', popupDesc: ''});
         var markerLayer = A.catalog();
         aladin.addCatalog(markerLayer);
         markerLayer.addSources([marker1])
@@ -78,11 +78,11 @@ aladin = A.aladin('#aladin-lite-div', {survey: "P/2MASS/color", fov:0.01, target
         var overlay = A.graphicOverlay({color: '#ee2345', lineWidth: 2});
         aladin.addOverlay(overlay);
         
-        overlay.add(A.circle(176.86902,-61.953732,1.6666666294137637e-05, {color: 'red'}));
-        overlay.add(A.circle(176.869022,-61.953732,5.8105833333333335e-05, {color: 'lightblue'}));
-        overlay.add(A.circle(NaN,NaN,NaN, {color: 'violet'}));
-        overlay.add(A.circle(176.86661,-61.95432,0.0007777777645323012, {color: 'lightgrey'}));
-        overlay.add(A.circle(176.869,-61.954,0.004833333194255829, {color: 'green'}));
+        overlay.add(A.circle(235.597322,-52.385994,1.6666666294137637e-05, {color: 'red'}));
+        overlay.add(A.circle(235.597399,-52.386009,6.771888888888889e-05, {color: 'lightblue'}));
+        overlay.add(A.circle(235.5973242658672,-52.38605208585878,0.00019726827561392354, {color: 'violet'}));
+        overlay.add(A.circle(235.59698,-52.38642,0.0009722222222222222, {color: 'lightgrey'}));
+        overlay.add(A.circle(235.597,-52.386,0.004666666686534882, {color: 'green'}));
        
         
         });
@@ -110,12 +110,12 @@ aladin = A.aladin('#aladin-lite-div', {survey: "P/2MASS/color", fov:0.01, target
     </div>
     -->
     <!-- add individual point markers
-        var marker1 = A.marker(176.86894042633617,-61.953719225831875, {popupTitle: 'Gaia', popupDesc: ''});
-        var marker2 = A.marker(176.86902,-61.953732, {popupTitle: '2MASS', popupDesc: ''});
-        var marker3 = A.marker(176.869022,-61.953732, {popupTitle: 'XMM Newton', popupDesc: ''});
-        var marker4 = A.marker(NaN,NaN, {popupTitle: 'Chandra', popupDesc: ''});
-        var marker5 = A.marker(176.86661,-61.95432, {popupTitle: 'Swift', popupDesc: ''});
-        var marker6 = A.marker(176.869,-61.954, {popupTitle: 'INTEGRAL', popupDesc: ''});
+        var marker1 = A.marker(235.59729827776863,-52.38601199162066, {popupTitle: 'Gaia', popupDesc: ''});
+        var marker2 = A.marker(235.597322,-52.385994, {popupTitle: '2MASS', popupDesc: ''});
+        var marker3 = A.marker(235.597399,-52.386009, {popupTitle: 'XMM Newton', popupDesc: ''});
+        var marker4 = A.marker(235.5973242658672,-52.38605208585878, {popupTitle: 'Chandra', popupDesc: ''});
+        var marker5 = A.marker(235.59698,-52.38642, {popupTitle: 'Swift', popupDesc: ''});
+        var marker6 = A.marker(235.597,-52.386, {popupTitle: 'INTEGRAL', popupDesc: ''});
         
         
         var markerLayer = A.catalog();
