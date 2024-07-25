@@ -3,7 +3,7 @@
  xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
 <!--
  !  VOTable written by STIL version 4.0.5-debian (uk.ac.starlink.votable.VOTableWriter)
- !  at 2024-07-23T07:36:32
+ !  at 2024-07-25T08:47:41
  !-->
 <RESOURCE>
 <TABLE name="/home/ffortin/Documents/projets_science/HMXB_catalogue/v2024-08.fits#1" nrows="164">
@@ -4432,8 +4432,8 @@
     <TD>NaN</TD>
     <TD>2005A&amp;A...436.1049M</TD>
     <TD>24.0</TD>
-    <TD>NaN</TD>
-    <TD>2015A&amp;ARv..23....2W</TD>
+    <TD>0.4</TD>
+    <TD>2011A&amp;A...527A...7S</TD>
     <TD>NaN</TD>
     <TD>NaN</TD>
     <TD></TD>
